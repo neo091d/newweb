@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration with Carousel</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Image carousel container -->
+    <div class="carousel-container">
+      <!-- User Registration Form -->
+      <div class="form-container">
+        <h2 id="center">User Registration Form</h2>
+        <form id="userForm">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="bio" rows="4" required></textarea>
+
+          <label for="subscribe">Subscribe to newsletter:</label>
+          <input type="checkbox" id="subscribe" name="subscribe" />
+
+          <button type="button" onclick="handleSubmit()">Submit</button>
+          <a
+            href="https://www.ctuniversity.in"
+            class="go-to-webpage-button"
+            target="_blank"
+            >Go to our web page</a
+          >
+        </form>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

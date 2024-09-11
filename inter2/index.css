@@ -1,0 +1,124 @@
+/* Basic page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Carousel background settings */
+.carousel-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.carousel-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: carousel 15s infinite;
+  opacity: 0.7; /* Slight transparency for background images */
+}
+
+/* Images to be rotated in the carousel */
+@keyframes carousel {
+  0% {
+    background-image: url("maxresdefault.jpg");
+  }
+  33% {
+    background-image: url("ctu.jpg");
+  }
+  66% {
+    background-image: url("CT-Campus-1687326876.jpg");
+  }
+  100% {
+    background-image: url("maxresdefault.jpg");
+  }
+}
+
+/* Styling for the form */
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent background for the form */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+#center {
+  text-align: center;
+}
+
+/* Form fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ecf0f1;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Styling for result display */
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e74c3c; /* Red background for error messages */
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  display: none;
+}
+
+.go-to-webpage-button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #2ecc71;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.go-to-webpage-button:hover {
+  background-color: #27ae60;
+}
